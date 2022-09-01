@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
             builder.apply {
                 setMessage("很抱歉，${getString(R.string.app_name)}已停止运行")
                 setPositiveButton("关闭应用") { _, _ -> this@MainActivity.finish() }
+                setCancelable(false)
             }
             delay(3000)
             withContext(Dispatchers.Main) {
